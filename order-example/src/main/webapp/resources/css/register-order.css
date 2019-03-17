@@ -1,0 +1,35 @@
+
+.order-header {
+    padding-bottom: 20px;
+    border-bottom: 1px dotted #000;
+    width:100%;
+}
+
+.order-itens {
+    padding-bottom: 10px;
+    border-bottom: 1px dotted #000;
+    padding-top: 10px;
+}
+
+.order-footer{
+    padding-top: 20px;
+    vertical-align: center;
+    margin:auto;
+    text-align:center;
+    width:100%;
+}
+
+.js-adicionar-produto{
+    margin-top: 13px;
+    height: 24px;
+}
+
+.js-quantidade{
+  text-align:right;
+}
+
+.js-table-container{
+  padding-top: 10px;
+
+}
+

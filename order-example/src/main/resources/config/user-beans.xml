@@ -1,0 +1,47 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<beans xmlns:context="http://www.springframework.org/schema/context" xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance"
+       xmlns="http://www.springframework.org/schema/beans"
+       xsi:schemaLocation=" http://www.springframework.org/schema/beans  http://www.springframework.org/schema/beans/spring-beans-3.0.xsd http://www.springframework.org/schema/context  http://www.springframework.org/schema/context/spring-context-3.0.xsd">
+    <context:component-scan base-package="br.com.fh"/>
+    <context:annotation-config/>
+
+
+    <!--service-->
+    <bean id="userService" class="br.com.fh.exampleorder.service.impl.DefaultUserService"/>
+    <bean id="orderIteService" class="br.com.fh.exampleorder.service.impl.DefaultOrderIteService"/>
+    <bean id="orderService" class="br.com.fh.exampleorder.service.impl.DefaultOrderService"/>
+    <bean id="productService" class="br.com.fh.exampleorder.service.impl.DefaultProductService"/>
+    <bean id="customerService" class="br.com.fh.exampleorder.service.impl.DefaultCustomerService"/>
+
+
+    <!--dao-->
+    <bean id="userDao" class="br.com.fh.exampleorder.dao.impl.DefaultUserDao"/>
+    <bean id="orderDao" class="br.com.fh.exampleorder.dao.impl.DefaultOrderDao"/>
+    <bean id="orderIteDao" class="br.com.fh.exampleorder.dao.impl.DefaultOrderIteDao"/>
+    <bean id="customerDao" class="br.com.fh.exampleorder.dao.impl.DefaultCustomerDao"/>
+    <bean id="productDao" class="br.com.fh.exampleorder.dao.impl.DefaultProductDao"/>
+
+
+    <!--spring configuration-->
+    <bean id="datasource" class="org.springframework.jdbc.datasource.DriverManagerDataSource">
+        <property name="driverClassName" value="com.mysql.jdbc.Driver"/>
+        <property name="url" value="jdbc:mysql://localhost:3306/orders"/>
+        <property name="username" value="root"/>
+        <property name="password" value="mysql"/>
+    </bean>
+
+
+    <bean id="jdbcTemplate" class="org.springframework.jdbc.core.JdbcTemplate">
+        <property name="dataSource" ref="datasource"/>
+    </bean>
+
+
+    <bean id="namedJdbcTemplate" class="org.springframework.jdbc.core.namedparam.NamedParameterJdbcTemplate">
+        <constructor-arg ref="datasource"></constructor-arg>
+    </bean>
+
+
+
+
+
+</beans>
