@@ -11,10 +11,9 @@
     <script src="https://code.jquery.com/ui/1.12.1/jquery-ui.js"></script>
 
     <script src="<c:url value="/resources/js/common.js" />"></script>
-    <script src="<c:url value="/resources/js/list-order-script.js" />"></script>
+    <script src="<c:url value="/resources/js/list-user-script.js" />"></script>
 
     <link rel="stylesheet" type="text/css" href='<c:url value="/resources/css/common.css" />'>
-    <link rel="stylesheet" type="text/css" href='<c:url value="/resources/css/list-order.css" />'>
 
     <link rel="stylesheet" href="//code.jquery.com/ui/1.12.1/themes/base/jquery-ui.css">
 
